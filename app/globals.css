@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+:root {
+  color-scheme: light;
+  --bg-canvas-primary: #f7f2ea;
+  --bg-canvas-secondary: #fff8f1;
+  --bg-surface-primary: #fffdf9;
+  --bg-surface-secondary: #f5ede3;
+  --bg-surface-tertiary: #efe4d6;
+  --bg-overlay-soft: rgba(58, 47, 42, 0.08);
+  --text-primary: #3a2f2a;
+  --text-secondary: #6b5b54;
+  --text-tertiary: #988980;
+  --text-inverse: #fffdf9;
+  --border-soft: #e6dacc;
+  --border-default: #d9cab8;
+  --border-strong: #c9b7a3;
+  --divider-soft: rgba(58, 47, 42, 0.1);
+  --accent-sage: #a8b89a;
+  --accent-rose: #d8a7a0;
+  --accent-peach: #e5b88a;
+  --accent-sky: #a9bdd1;
+  --accent-lavender: #b9aec7;
+  --accent-gold: #d9c08d;
+  --mood-happy: #f2d38b;
+  --mood-calm: #afc6d9;
+  --mood-neutral: #cfc4ba;
+  --mood-sad: #b7a9c9;
+  --mood-stressed: #d9a5a0;
+  --mood-grateful: #b8c9a3;
+  --mood-rose: #d8a7a0;
+  --shadow-card: 0 8px 24px rgba(58, 47, 42, 0.08);
+  --shadow-elevated: 0 14px 36px rgba(58, 47, 42, 0.12);
+  --shadow-modal: 0 24px 60px rgba(58, 47, 42, 0.18);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+  --motion-fast: 180ms;
+  --motion-base: 280ms;
+  --motion-slow: 420ms;
+  --motion-slower: 600ms;
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --app-background:
+    radial-gradient(circle at top left, rgba(216, 167, 160, 0.28), transparent 28%),
+    radial-gradient(circle at top right, rgba(169, 189, 209, 0.22), transparent 26%),
+    linear-gradient(180deg, #fff8f1 0%, #f7f2ea 40%, #f2e9de 100%);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-canvas-primary: #1f1a18;
+  --bg-canvas-secondary: #2a2320;
+  --bg-surface-primary: #2c2522;
+  --bg-surface-secondary: #352c29;
+  --bg-surface-tertiary: #403632;
+  --bg-overlay-soft: rgba(0, 0, 0, 0.35);
+  --text-primary: #f3eae0;
+  --text-secondary: #d5c8bc;
+  --text-tertiary: #ab9a90;
+  --text-inverse: #1f1a18;
+  --border-soft: #4a3d38;
+  --border-default: #5a4a44;
+  --border-strong: #6b5952;
+  --divider-soft: rgba(243, 234, 224, 0.12);
+  --accent-sage: #8fa186;
+  --accent-rose: #c08f89;
+  --accent-peach: #d1a073;
+  --accent-sky: #8ea8bc;
+  --accent-lavender: #9d91b3;
+  --accent-gold: #b49a69;
+  --mood-happy: #cfa85b;
+  --mood-calm: #7e9cb1;
+  --mood-neutral: #8c7f76;
+  --mood-sad: #8f7ea8;
+  --mood-stressed: #b37a75;
+  --mood-grateful: #8ea06e;
+  --mood-rose: #c08f89;
+  --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.28);
+  --shadow-elevated: 0 16px 40px rgba(0, 0, 0, 0.32);
+  --shadow-modal: 0 24px 60px rgba(0, 0, 0, 0.42);
+  --app-background:
+    radial-gradient(circle at top left, rgba(192, 143, 137, 0.18), transparent 26%),
+    radial-gradient(circle at top right, rgba(143, 161, 134, 0.12), transparent 22%),
+    linear-gradient(180deg, #2a2320 0%, #1f1a18 48%, #171311 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.prose-diary {
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.prose-diary > * + * {
+  margin-top: 1.15rem;
+}
+
+.prose-diary h1,
+.prose-diary h2,
+.prose-diary h3 {
+  font-family: var(--font-display), serif;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-top: 2rem;
+}
+
+.prose-diary h1 {
+  font-size: 2.2rem;
+}
+
+.prose-diary h2 {
+  font-size: 1.8rem;
+}
+
+.prose-diary h3 {
+  font-size: 1.45rem;
+}
+
+.prose-diary p,
+.prose-diary li,
+.prose-diary blockquote {
+  color: var(--text-secondary);
+}
+
+.prose-diary ul,
+.prose-diary ol {
+  padding-left: 1.25rem;
+}
+
+.prose-diary ul {
+  list-style: disc;
+}
+
+.prose-diary ol {
+  list-style: decimal;
+}
+
+.prose-diary a {
+  color: var(--accent-peach);
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.prose-diary blockquote {
+  border-left: 1px solid var(--border-default);
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.prose-diary code {
+  border-radius: 0.5rem;
+  background: var(--bg-surface-secondary);
+  padding: 0.15rem 0.45rem;
+  font-size: 0.95rem;
+}
+
+.prose-diary pre {
+  overflow-x: auto;
+  border-radius: 1.25rem;
+  background: var(--bg-surface-secondary);
+  padding: 1rem;
+}
+
+.prose-diary pre code {
+  background: transparent;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
