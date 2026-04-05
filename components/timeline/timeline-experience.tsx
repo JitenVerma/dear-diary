@@ -95,7 +95,8 @@ export function TimelineExperience({
 
             <div className="rounded-[var(--radius-lg)] border border-[var(--border-soft)] bg-[var(--bg-surface-secondary)] p-4">
               <p className="text-sm leading-7 text-[var(--text-secondary)]">
-                Scroll through the months, revisit a feeling, or follow a thread through the tags that stay with you.
+                Scroll through your days, revisit a feeling, or return to the rituals that helped you process what was
+                happening.
               </p>
             </div>
 
@@ -103,9 +104,10 @@ export function TimelineExperience({
               <div className="flex items-start gap-3">
                 <BookHeart className="mt-0.5 h-5 w-5 text-[var(--text-primary)]" />
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">Meaning now sits beside time.</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">Meaning sits beside time here.</p>
                   <p className="mt-1 text-sm leading-6 text-[var(--text-secondary)]">
-                    Life chapters soften the timeline into eras you can recognize, not just dates you can scroll past.
+                    Life chapters and ritual modes make the timeline feel less like an archive and more like a story of
+                    how you moved through each season.
                   </p>
                 </div>
               </div>
@@ -116,7 +118,7 @@ export function TimelineExperience({
         <div className="space-y-6">
           {created ? (
             <div className="rounded-[var(--radius-lg)] border border-transparent bg-[color:var(--accent-sage)]/18 px-5 py-4 text-sm text-[var(--text-primary)] shadow-[var(--shadow-card)]">
-              Your entry was saved to Notion and woven back into the timeline.
+              Your ritual was saved to Notion and settled gently back into the timeline.
             </div>
           ) : null}
 
@@ -166,7 +168,7 @@ export function TimelineExperience({
 
           <div className="flex justify-center pt-2">
             <Link href="/entry/new">
-              <Button variant="secondary">Capture a new memory</Button>
+              <Button variant="secondary">Start today&apos;s ritual</Button>
             </Link>
           </div>
         </div>

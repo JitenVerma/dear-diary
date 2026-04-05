@@ -200,7 +200,7 @@ export async function retrieveDiaryMarkdown(pageId: string) {
 }
 
 export async function createDiaryPage(payload: {
-  title: string;
+  title?: string;
   entryDate: string;
   mood?: string;
   tags?: string[];
@@ -221,7 +221,7 @@ export async function createDiaryPage(payload: {
           title: [
             {
               text: {
-                content: payload.title
+                content: payload.title || "Untitled Memory"
               }
             }
           ]

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 
 import { Chip } from "@/components/ui/chip";
+import { entryModeDefinitions } from "@/lib/constants";
 import type { DiaryEntry } from "@/lib/types";
 import { getMoodTone } from "@/lib/theme/moods";
 import { cn } from "@/lib/utils/cn";
@@ -25,6 +26,7 @@ export function TimelineCard({ entry, align }: TimelineCardProps) {
   );
   const reduceMotion = isHydrated && reducedMotionPreference;
   const marker = getTimelineMarkerParts(entry.entryDate);
+  const modeLabel = entryModeDefinitions.find((definition) => definition.mode === entry.mode)?.title;
 
   return (
     <div className="relative grid md:grid-cols-[1fr_5rem_1fr]">
@@ -82,6 +84,7 @@ export function TimelineCard({ entry, align }: TimelineCardProps) {
           <p className="mt-3 text-base leading-7 text-[var(--text-secondary)]">{entry.excerpt}</p>
 
           <div className="mt-5 flex flex-wrap gap-2">
+            {modeLabel ? <Chip tone="soft">{modeLabel}</Chip> : null}
             {entry.mood ? (
               <Chip
                 tone="accent"

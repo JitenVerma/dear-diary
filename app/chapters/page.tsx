@@ -25,7 +25,7 @@ export default async function ChaptersPage() {
             <div className="flex items-start gap-3">
               <BookHeart className="mt-1 h-5 w-5 text-[var(--text-primary)]" />
               <p className="text-sm leading-7 text-[var(--text-secondary)]">
-                Chapters are app-managed in v2 so they can stay lightweight, editable, and easy to integrate across the timeline.
+                Chapters stay app-managed so they can remain lightweight, editable, and easy to weave through the ritual timeline.
               </p>
             </div>
           </SurfaceCard>

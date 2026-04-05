@@ -8,7 +8,7 @@ export function SiteHeader() {
     { href: "/", label: "Timeline", icon: Route },
     { href: "/heatmap", label: "Heatmap", icon: LayoutGrid },
     { href: "/chapters", label: "Chapters", icon: BookHeart },
-    { href: "/entry/new", label: "New Entry", icon: PencilLine }
+    { href: "/entry/new", label: "Start Ritual", icon: PencilLine }
   ];
 
   return (
@@ -46,7 +46,7 @@ export function SiteHeader() {
             href="/entry/new"
             className="hidden rounded-full bg-[var(--accent-peach)] px-4 py-2 text-sm font-medium text-[var(--text-primary)] shadow-[var(--shadow-card)] transition duration-[var(--motion-base)] ease-[var(--ease-soft)] hover:-translate-y-0.5 md:inline-flex"
           >
-            New Entry
+            Start Ritual
           </Link>
           <ThemeToggle />
         </div>

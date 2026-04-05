@@ -1,3 +1,20 @@
+export type EntryMode = "reflect" | "unload" | "plan" | "rest" | "free";
+
+export type ArrivalState = "calm" | "overwhelmed" | "tired" | "scattered" | "okay";
+
+export type TomorrowPlan = {
+  priorities?: string[];
+  intention?: string;
+  note?: string;
+};
+
+export type DayClosure = {
+  summary?: string;
+  carryForward?: string;
+  release?: string;
+  finalNote?: string;
+};
+
 export type DiaryEntry = {
   id: string;
   title: string;
@@ -10,16 +27,24 @@ export type DiaryEntry = {
   coverImageUrl?: string | null;
   createdAt?: string;
   updatedAt?: string;
+  mode?: EntryMode;
+  arrivalState?: ArrivalState;
+  tomorrowPlan?: TomorrowPlan;
+  closure?: DayClosure;
 };
 
 export type DiaryEntryPayload = {
-  title: string;
+  title?: string;
   entryDate: string;
   mood?: string;
   tags?: string[];
   body: string;
   coverImageUrl?: string;
   favorite?: boolean;
+  mode?: EntryMode;
+  arrivalState?: ArrivalState;
+  tomorrowPlan?: TomorrowPlan;
+  closure?: DayClosure;
 };
 
 export type DiaryEntrySummary = Pick<DiaryEntry, "id" | "title" | "excerpt" | "mood" | "tags" | "favorite">;

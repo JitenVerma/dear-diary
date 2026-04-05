@@ -1,0 +1,66 @@
+[
+  {
+    "entryId": "welcome-entry",
+    "mode": "reflect",
+    "arrivalState": "okay",
+    "tomorrowPlan": {
+      "priorities": [
+        "Begin gently",
+        "Write one honest paragraph"
+      ],
+      "intention": "Steady",
+      "note": "Let small progress count."
+    },
+    "closure": {
+      "summary": "meaningful",
+      "carryForward": "The reminder that a beginning can be quiet.",
+      "release": "The pressure to make the first page perfect.",
+      "finalNote": "A first sentence is enough tonight."
+    },
+    "createdAt": "2026-04-04T09:00:00.000Z",
+    "updatedAt": "2026-04-04T09:00:00.000Z"
+  },
+  {
+    "entryId": "338d21ef-79d8-81b4-b9e0-f9c41d7e6f7a",
+    "mode": "reflect",
+    "arrivalState": "overwhelmed",
+    "tomorrowPlan": {
+      "priorities": [
+        "test1",
+        "2"
+      ],
+      "intention": "At peace",
+      "note": "I want to sleep in"
+    },
+    "closure": {
+      "summary": "heavy",
+      "carryForward": "this is cool",
+      "release": "wow",
+      "finalNote": "tes2"
+    },
+    "createdAt": "2026-04-04T13:24:29.621Z",
+    "updatedAt": "2026-04-04T13:24:29.621Z"
+  },
+  {
+    "entryId": "339d21ef-79d8-81f4-9a75-d7071eb4dedc",
+    "mode": "reflect",
+    "arrivalState": "calm",
+    "tomorrowPlan": {
+      "priorities": [
+        "Peaceful time by myself",
+        "Reading !!",
+        "Time with friends"
+      ],
+      "intention": "Rested and spending quality time with my closest two friends !",
+      "note": "Just soak up some sun if youre lucky and get some haha ! Just relax and allow yourself to just immerse yourself in the nature ! Look around and admire its beauty. And just smile hehe :)"
+    },
+    "closure": {
+      "summary": "meaningful",
+      "carryForward": "Im carrying some positivity! A will to find a moment of peace! And dont think of peace as something scarce.",
+      "release": "I am leaving behind some negative thoughts I had earlier this morning. The feeling of dreading hanging out with my family. Instead, I will take it upon myself to ensure I organise some quality time with them.",
+      "finalNote": "You have experienced a lot of grief and trauma. The past couple of years you have kept reminding yourself that you are in search of peace."
+    },
+    "createdAt": "2026-04-05T13:14:35.071Z",
+    "updatedAt": "2026-04-05T13:14:35.071Z"
+  }
+]

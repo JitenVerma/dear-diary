@@ -1,4 +1,5 @@
 import type { DiaryEntry } from "@/lib/types";
+import { extractRitualMarkdown } from "@/lib/ritual/markdown";
 
 import type { NotionPageResponse } from "./client";
 
@@ -101,13 +102,14 @@ export function mapNotionPageToDiaryEntry(page: NotionPageResponse, markdown?: s
 
   const title = plainText(titleProperty?.title) || "Untitled Memory";
   const normalizedMarkdown = normalizeNotionMarkdown(markdown);
-  const body = normalizedMarkdown?.trim() || undefined;
+  const ritualAwareContent = extractRitualMarkdown(normalizedMarkdown);
+  const body = ritualAwareContent.body?.trim() || undefined;
 
   return {
     id: page.id,
     title,
     entryDate: entryDateProperty?.date?.start ?? page.created_time,
-    excerpt: excerptFromMarkdown(normalizedMarkdown),
+    excerpt: excerptFromMarkdown(body),
     body,
     mood: moodProperty?.select?.name,
     tags:
@@ -117,6 +119,8 @@ export function mapNotionPageToDiaryEntry(page: NotionPageResponse, markdown?: s
     favorite: favoriteProperty?.checkbox ?? false,
     coverImageUrl: resolveCoverImage(page),
     createdAt: page.created_time,
-    updatedAt: page.last_edited_time
+    updatedAt: page.last_edited_time,
+    tomorrowPlan: ritualAwareContent.tomorrowPlan,
+    closure: ritualAwareContent.closure
   };
 }

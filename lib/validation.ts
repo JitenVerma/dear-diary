@@ -1,7 +1,10 @@
 import { z } from "zod";
 
+const entryModeSchema = z.enum(["reflect", "unload", "plan", "rest", "free"]);
+const arrivalStateSchema = z.enum(["calm", "overwhelmed", "tired", "scattered", "okay"]);
+
 export const diaryEntrySchema = z.object({
-  title: z.string().trim().min(1, "Title is required.").max(120, "Title is too long."),
+  title: z.string().trim().max(120, "Title is too long.").optional().or(z.literal("")),
   entryDate: z.string().date("Please choose a valid date."),
   mood: z.string().trim().max(50).optional().or(z.literal("")),
   tags: z
@@ -10,7 +13,24 @@ export const diaryEntrySchema = z.object({
     .optional(),
   body: z.string().trim().min(1, "Body is required.").max(20000, "Body is too long."),
   coverImageUrl: z.string().trim().url("Please provide a valid image URL.").optional().or(z.literal("")),
-  favorite: z.boolean().optional()
+  favorite: z.boolean().optional(),
+  mode: entryModeSchema.optional(),
+  arrivalState: arrivalStateSchema.optional(),
+  tomorrowPlan: z
+    .object({
+      priorities: z.array(z.string().trim().max(140)).max(3).optional(),
+      intention: z.string().trim().max(200).optional().or(z.literal("")),
+      note: z.string().trim().max(500).optional().or(z.literal(""))
+    })
+    .optional(),
+  closure: z
+    .object({
+      summary: z.string().trim().max(80).optional().or(z.literal("")),
+      carryForward: z.string().trim().max(500).optional().or(z.literal("")),
+      release: z.string().trim().max(500).optional().or(z.literal("")),
+      finalNote: z.string().trim().max(500).optional().or(z.literal(""))
+    })
+    .optional()
 });
 
 export type DiaryEntryInput = z.infer<typeof diaryEntrySchema>;
