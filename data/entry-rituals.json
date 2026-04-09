@@ -62,5 +62,53 @@
     },
     "createdAt": "2026-04-05T13:14:35.071Z",
     "updatedAt": "2026-04-05T13:14:35.071Z"
+  },
+  {
+    "entryId": "33cd21ef-79d8-812c-85e7-de4eae1712ec",
+    "mode": "free",
+    "arrivalState": "calm",
+    "closure": {
+      "summary": "peaceful",
+      "carryForward": "Self love",
+      "release": "Hopefully the art of lying to myself lol",
+      "finalNote": "Its okay to feel how you feel. Its okay to do what youre doing. Its okay to just be yourself. Unapologetically yourself. Just enjoy your own journey!"
+    },
+    "createdAt": "2026-04-08T14:25:10.196Z",
+    "updatedAt": "2026-04-08T14:25:10.196Z"
+  },
+  {
+    "entryId": "33cd21ef-79d8-81c9-92fb-ce1a75563933",
+    "mode": "unload",
+    "arrivalState": "overwhelmed",
+    "closure": {
+      "summary": "heavy",
+      "carryForward": "The burden of continuing to figure out life. Figure out whats meant for me.",
+      "release": "Some negative thoughts, and lack of self acceptance.",
+      "finalNote": "Prioritise yourself. Your healing. Your mental health. Remember it all needs to start with you !"
+    },
+    "createdAt": "2026-04-08T14:45:53.828Z",
+    "updatedAt": "2026-04-08T14:45:53.828Z"
+  },
+  {
+    "entryId": "33cd21ef-79d8-81e8-b9b0-cb231def738f",
+    "mode": "unload",
+    "arrivalState": "okay",
+    "tomorrowPlan": {
+      "priorities": [
+        "Rest",
+        "Gym",
+        "Read"
+      ],
+      "intention": "Steady",
+      "note": "Just try your best to relax, unwind. Remove the feelings of guilt and just let yourself enjoy the moment ! You have some beautiful people in your life. Let yourself heal. Its gonna be okay !"
+    },
+    "closure": {
+      "summary": "unfinished",
+      "carryForward": "Confusion haha ! What is the correct path to go down?",
+      "release": "Feeling of guilt. I am not doing anything wrong. Other people have done whatever they wanted to. Without any consideration for consequences. You were left to deal with that all on your own! Youre allowed to make your own choices. If it hurts others, that so be it!",
+      "finalNote": "Just be yourself :)"
+    },
+    "createdAt": "2026-04-08T15:03:27.979Z",
+    "updatedAt": "2026-04-08T15:03:27.979Z"
   }
 ]

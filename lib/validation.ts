@@ -18,17 +18,17 @@ export const diaryEntrySchema = z.object({
   arrivalState: arrivalStateSchema.optional(),
   tomorrowPlan: z
     .object({
-      priorities: z.array(z.string().trim().max(140)).max(3).optional(),
-      intention: z.string().trim().max(200).optional().or(z.literal("")),
-      note: z.string().trim().max(500).optional().or(z.literal(""))
+      priorities: z.array(z.string().trim().max(400, "Keep each priority under 400 characters.")).max(3).optional(),
+      intention: z.string().trim().max(2500, "Keep the intention under 2500 characters.").optional().or(z.literal("")),
+      note: z.string().trim().max(6000, "Keep the note under 6000 characters.").optional().or(z.literal(""))
     })
     .optional(),
   closure: z
     .object({
-      summary: z.string().trim().max(80).optional().or(z.literal("")),
-      carryForward: z.string().trim().max(500).optional().or(z.literal("")),
-      release: z.string().trim().max(500).optional().or(z.literal("")),
-      finalNote: z.string().trim().max(500).optional().or(z.literal(""))
+      summary: z.string().trim().max(200, "Keep the summary under 200 characters.").optional().or(z.literal("")),
+      carryForward: z.string().trim().max(6000, "Keep this reflection under 6000 characters.").optional().or(z.literal("")),
+      release: z.string().trim().max(6000, "Keep this reflection under 6000 characters.").optional().or(z.literal("")),
+      finalNote: z.string().trim().max(6000, "Keep this reflection under 6000 characters.").optional().or(z.literal(""))
     })
     .optional()
 });

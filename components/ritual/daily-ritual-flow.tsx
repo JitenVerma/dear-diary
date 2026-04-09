@@ -231,7 +231,7 @@ export function DailyRitualFlow({ initialDate }: { initialDate?: string }) {
     setValues((current) => ({
       ...current,
       mode,
-      body: current.body.trim().length === 0 ? ritualTemplates[mode] : current.body
+      body: current.mode === mode ? current.body : ritualTemplates[mode]
     }));
     goToStep("write");
   }

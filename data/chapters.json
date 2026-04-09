@@ -1,21 +1,11 @@
 [
   {
-    "id": "chapter-new-beginnings",
-    "title": "New Beginnings",
-    "startDate": "2026-01-01",
-    "endDate": "2026-02-29",
-    "description": "A slow season of rebuilding routines and noticing small joys again.",
-    "themeColor": "#D9C08D",
-    "createdAt": "2026-02-01T09:00:00.000Z",
-    "updatedAt": "2026-02-01T09:00:00.000Z"
-  },
-  {
     "id": "chapter-healing-era",
     "title": "Healing Era",
     "startDate": "2026-03-01",
     "description": "Choosing steadier days, gentler habits, and quieter progress.",
-    "themeColor": "#B9AEC7",
+    "themeColor": "#E5B88A",
     "createdAt": "2026-03-01T09:00:00.000Z",
-    "updatedAt": "2026-04-04T11:35:54.095Z"
+    "updatedAt": "2026-04-08T15:06:10.624Z"
   }
 ]
